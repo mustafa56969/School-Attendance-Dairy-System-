@@ -1,0 +1,81 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+# .vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ============================================
+# SECRETS - DO NOT COMMIT THESE FILES
+# ============================================
+
+# Firebase Configuration
+**/google-services.json
+**/firebase_options.dart
+
+# Android Keystore Files (signing keys)
+**/*.jks
+**/upload-keystore.jks
+/android/app/key.jks
+/android/upload-keystore.jks
+
+# Android Key Properties (contains keystore passwords)
+/android/key.properties
+
+# Android Local Properties (contains personal SDK paths)
+/android/local.properties
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# iOS GoogleService-Info.plist files (contain secrets)
+/ios/Runner/GoogleService-Info.plist
+
+# macOS GoogleService-Info.plist files
+macos/Runner/GoogleService-Info.plist
+
+# API Keys and credentials
+**/api_keys.dart
+**/secrets.dart
+**/credentials.json

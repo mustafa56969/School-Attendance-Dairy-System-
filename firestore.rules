@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Check if user is logged in
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper to check if super admin
+    function isSuperAdmin() {
+      return request.auth != null && request.auth.token.email == 'pak@admin.com';
+    }
+    
+    // Helper to check role (requires user document to exist)
+    function hasRole(role) {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role;
+    }
+
+    // 1. User Profiles
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && (request.auth.uid == userId || isSuperAdmin());
+    }
+
+    // 2. Announcements (Students READ, Admin WRITES)
+    match /admin_announcements/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin();
+    }
+
+    // 3. Student Messages (Students CREATE & READ OWN, Admin MANAGES)
+    match /student_messages/{docId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      // Allow user to delete their own message, or admin to manage all
+      allow update, delete: if isSuperAdmin() || hasRole('admin') || (isAuthenticated() && resource.data.studentId == request.auth.uid);
+    }
+
+    // 4. Broadcast Notifications (Required for real-time alerts)
+    match /broadcast_notifications/{docId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated(); // Students trigger this when sending messages
+      allow update, delete: if isSuperAdmin();
+    }
+
+    // 5. Attendance & Diaries (Teachers/Admins Manage)
+    match /attendance/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || hasRole('admin') || hasRole('teacher'); 
+    }
+
+    match /diaries/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || hasRole('admin') || hasRole('teacher');
+    }
+
+    // 6. Subjects & App Config
+    match /subjects/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin();
+    }
+
+    match /app_config/{docId} {
+      allow read: if true;
+      allow write: if isSuperAdmin();
+    }
+
+    // 7. Personal Notes (Only owner can access)
+    match /notes/{docId} {
+      allow read, write: if isAuthenticated() && (resource == null || request.auth.uid == resource.data.userId);
+      allow create: if isAuthenticated();
+    }
+
+    // 8. Default catch-all (Restricted to Super Admin)
+    match /{path=**} {
+      allow read, write: if isSuperAdmin();
+    }
+  }
+}

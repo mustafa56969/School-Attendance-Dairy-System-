@@ -1,0 +1,196 @@
+﻿> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING: [CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+[CXX5106] NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [27.0.12077973] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Task :app:signingReport
+Variant: debug
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+Variant: release
+Config: release
+Store: D:\Gravity no front - Copy\school_diary_app\android\app\key.jks
+Alias: key
+MD5: 86:6B:66:5E:13:6B:37:1C:18:74:70:8A:38:39:96:9A
+SHA1: 31:8A:15:E9:78:80:89:D1:CA:1A:E5:C4:A7:94:8C:81:26:56:43:4F
+SHA-256: 54:8B:2F:C5:46:B9:C7:B3:D8:BB:33:C0:34:8D:D7:8E:51:88:8F:43:83:36:2B:EA:A5:A9:94:27:7C:15:42:A4
+Valid until: Sunday, April 13, 2053
+----------
+Variant: profile
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :cloud_firestore:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :connectivity_plus:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :firebase_app_check:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :firebase_auth:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :firebase_core:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :google_sign_in_android:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :path_provider_android:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :shared_preferences_android:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+> Task :url_launcher_android:signingReport
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\SAFI\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 10:82:D5:3F:18:61:46:DC:05:5C:93:78:FF:4C:9D:FD
+SHA1: 01:DE:60:EE:D4:7C:4B:5D:09:99:DD:E0:24:7D:1D:AC:1B:4D:02:AB
+SHA-256: 04:55:56:5D:1F:72:4E:1C:E8:30:6F:63:19:3B:87:AB:1A:24:2C:78:D5:57:BE:05:CC:77:CC:50:D9:7F:03:28
+Valid until: Wednesday, April 14, 2055
+----------
+
+[Incubating] Problems report is available at: file:///D:/Gravity%20no%20front%20-%20Copy/school_diary_app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.12/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3s
+14 actionable tasks: 10 executed, 4 up-to-date

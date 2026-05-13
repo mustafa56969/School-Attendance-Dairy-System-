@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Grid Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-main: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: #1e293b;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Screen Transitions */
+        .screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            background: var(--bg-main);
+        }
+
+        .screen-hidden-right {
+            transform: translateY(30px);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .screen-hidden-left {
+            transform: scale(0.95);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .screen-active {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            z-index: 20;
+        }
+
+        /* Note Grid Responsiveness */
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            padding-bottom: 100px;
+        }
+
+        /* Note Cards */
+        .note-card {
+            aspect-ratio: 1 / 1;
+            border-radius: 28px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .note-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .note-card:active {
+            transform: scale(0.96);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 72px;
+            height: 72px;
+            background: #0f172a;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.2s ease;
+        }
+        
+        .fab:hover {
+            transform: translateY(-4px) scale(1.05);
+            background: #1e293b;
+        }
+        
+        .fab:active { transform: scale(0.9); }
+
+        /* Expanded Vibrant Colors Palette */
+        .color-1 { background-color: #fef08a; color: #713f12; } /* Yellow */
+        .color-2 { background-color: #fed7aa; color: #7c2d12; } /* Orange */
+        .color-3 { background-color: #bbf7d0; color: #064e3b; } /* Green */
+        .color-4 { background-color: #bae6fd; color: #0c4a6e; } /* Sky */
+        .color-5 { background-color: #e9d5ff; color: #581c87; } /* Purple */
+        .color-6 { background-color: #fecaca; color: #7f1d1d; } /* Red */
+        .color-7 { background-color: #ddd6fe; color: #4c1d95; } /* Violet */
+        .color-8 { background-color: #f5d0fe; color: #701a75; } /* Fuchsia */
+        .color-9 { background-color: #99f6e4; color: #134e4a; } /* Teal */
+        .color-10 { background-color: #d9f99d; color: #365314; } /* Lime */
+        .color-11 { background-color: #fbcfe8; color: #831843; } /* Pink */
+        .color-12 { background-color: #e2e8f0; color: #1e293b; } /* Slate */
+
+        #note-content {
+            background: transparent;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            .notes-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .fab {
+                bottom: 24px;
+                right: 24px;
+                width: 60px;
+                height: 60px;
+            }
+            .note-card {
+                padding: 16px;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main id="screen-list" class="screen screen-active overflow-y-auto">
+        <header class="sticky top-0 z-30 bg-[#f8fafc]/80 backdrop-blur-md border-b border-slate-200/50">
+            <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight">My Notes</h1>
+                    <p id="note-count" class="text-slate-400 text-lg font-medium mt-3">0 entries</p>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <div class="relative group">
+                        <input type="text" id="search-input" placeholder="Search notes..." 
+                            class="bg-white border border-slate-200 rounded-2xl py-3 pl-12 pr-6 outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 transition-all w-full md:w-64 text-sm font-medium shadow-sm">
+                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-slate-900 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-6xl mx-auto px-6 py-12">
+            <div id="notes-container" class="notes-grid">
+                </div>
+        </div>
+
+        <button class="fab" onclick="openEditor()" aria-label="Create new note">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+    </main>
+
+    <div id="screen-editor" class="screen screen-hidden-right flex flex-col">
+        <header class="w-full max-w-4xl mx-auto px-6 py-8 flex justify-between items-center">
+            <button onclick="closeEditor()" class="group flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors font-bold">
+                <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center group-hover:bg-slate-50 transition-colors shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </div>
+                <span>Back</span>
+            </button>
+
+            <div class="flex gap-3">
+                <button id="delete-btn" onclick="deleteNote()" class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center border border-red-100 text-red-500 hover:bg-red-100 transition-colors hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
+                <button onclick="saveNote()" class="bg-slate-900 text-white px-8 py-3 rounded-xl text-sm font-bold shadow-lg shadow-slate-900/20 hover:bg-slate-800 transition-all">Save Note</button>
+            </div>
+        </header>
+
+        <div class="flex-1 w-full max-w-4xl mx-auto px-6 pb-12 flex flex-col">
+            <input type="text" id="note-title" placeholder="Enter a title..." 
+                class="text-4xl md:text-5xl font-extrabold text-slate-900 outline-none mb-6 w-full placeholder:text-slate-200 bg-transparent tracking-tight">
+            <textarea id="note-content" placeholder="Start typing your thoughts here..." 
+                class="flex-1 text-slate-700 text-xl font-medium resize-none outline-none w-full placeholder:text-slate-200"></textarea>
+        </div>
+    </div>
+
+    <script>
+        let notes = JSON.parse(localStorage.getItem('vibrant-web-notes')) || [];
+        let currentEditingId = null;
+        let searchQuery = "";
+        
+        // Expanded to 12 colors
+        const colorClasses = [
+            'color-1', 'color-2', 'color-3', 'color-4', 
+            'color-5', 'color-6', 'color-7', 'color-8', 
+            'color-9', 'color-10', 'color-11', 'color-12'
+        ];
+
+        const screenList = document.getElementById('screen-list');
+        const screenEditor = document.getElementById('screen-editor');
+        const notesContainer = document.getElementById('notes-container');
+        const titleInput = document.getElementById('note-title');
+        const contentInput = document.getElementById('note-content');
+        const deleteBtn = document.getElementById('delete-btn');
+        const noteCountEl = document.getElementById('note-count');
+        const searchInput = document.getElementById('search-input');
+
+        function renderNotes() {
+            notesContainer.innerHTML = '';
+            
+            const filtered = notes.filter(n => 
+                n.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                n.content.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+
+            noteCountEl.innerText = `${filtered.length} ${filtered.length === 1 ? 'note' : 'notes'} found`;
+            
+            if (filtered.length === 0) {
+                notesContainer.innerHTML = `
+                    <div class="col-span-full py-32 text-center">
+                        <div class="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-300">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                        </div>
+                        <p class="font-bold text-slate-400 text-xl">No notes to display</p>
+                        <p class="text-slate-400 text-sm mt-1">Try a different search or create a new note.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const sortedNotes = [...filtered].sort((a, b) => b.updatedAt - a.updatedAt);
+
+            sortedNotes.forEach(note => {
+                const card = document.createElement('div');
+                card.className = `note-card ${note.colorClass}`;
+                card.onclick = () => openEditor(note.id);
+                
+                const date = new Date(note.updatedAt).toLocaleDateString(undefined, { 
+                    month: 'short', 
+                    day: 'numeric'
+                });
+                
+                card.innerHTML = `
+                    <div class="overflow-hidden">
+                        <h3 class="font-bold mb-3 text-2xl leading-tight line-clamp-2">${note.title || 'Untitled'}</h3>
+                        <p class="text-sm font-semibold opacity-70 line-clamp-4 leading-relaxed">${note.content || 'No content yet...'}</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-black/5">
+                        <span class="text-[11px] font-bold opacity-40 uppercase tracking-widest">${date}</span>
+                        <div class="w-8 h-8 rounded-full bg-white/40 flex items-center justify-center backdrop-blur-sm">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        </div>
+                    </div>
+                `;
+                notesContainer.appendChild(card);
+            });
+        }
+
+        function openEditor(id = null) {
+            currentEditingId = id;
+            if (id) {
+                const note = notes.find(n => n.id === id);
+                titleInput.value = note.title;
+                contentInput.value = note.content;
+                deleteBtn.classList.remove('hidden');
+            } else {
+                titleInput.value = '';
+                contentInput.value = '';
+                deleteBtn.classList.add('hidden');
+            }
+
+            screenList.classList.add('screen-hidden-left');
+            screenList.classList.remove('screen-active');
+            screenEditor.classList.add('screen-active');
+            screenEditor.classList.remove('screen-hidden-right');
+            
+            setTimeout(() => titleInput.focus(), 400);
+        }
+
+        function closeEditor() {
+            screenEditor.classList.remove('screen-active');
+            screenEditor.classList.add('screen-hidden-right');
+            screenList.classList.add('screen-active');
+            screenList.classList.remove('screen-hidden-left');
+            currentEditingId = null;
+            renderNotes();
+        }
+
+        function saveNote() {
+            const title = titleInput.value.trim();
+            const content = contentInput.value.trim();
+
+            if (!title && !content) {
+                closeEditor();
+                return;
+            }
+
+            if (currentEditingId) {
+                notes = notes.map(n => n.id === currentEditingId ? { 
+                    ...n, title, content, updatedAt: Date.now() 
+                } : n);
+            } else {
+                const newNote = {
+                    id: Date.now().toString(),
+                    title,
+                    content,
+                    colorClass: colorClasses[Math.floor(Math.random() * colorClasses.length)],
+                    updatedAt: Date.now()
+                };
+                notes.push(newNote);
+            }
+
+            localStorage.setItem('vibrant-web-notes', JSON.stringify(notes));
+            closeEditor();
+        }
+
+        function deleteNote() {
+            if (!currentEditingId) return;
+            notes = notes.filter(n => n.id !== currentEditingId);
+            localStorage.setItem('vibrant-web-notes', JSON.stringify(notes));
+            closeEditor();
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderNotes();
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && screenEditor.classList.contains('screen-active')) {
+                closeEditor();
+            }
+        });
+
+        window.onload = renderNotes;
+    </script>
+</body>
+</html>
