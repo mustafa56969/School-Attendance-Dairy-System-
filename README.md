@@ -1,5 +1,7 @@
 # School Diary App
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Mustafa56969/School--Attendance--Dairy--System--blue?style=flat&logo=github)](https://github.com/mustafa56969/School-Attendance-Dairy-System-)
+
 <p align="center">
   <img src="https://img.shields.io/badge/Flutter-3.5.0+-02569B?style=for-the-badge&logo=flutter" alt="Flutter">
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase" alt="Firebase">
