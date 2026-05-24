@@ -8,11 +8,31 @@
   <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web-blue?style=for-the-badge">
 </p>
 
-> A modern, feature-rich Flutter application for seamless school management. Track **diaries**, manage **homework**, send **announcements**, and monitor **attendance** - all in one beautiful dashboard.
+> A modern, feature-rich Flutter application for seamless school management. Track **diaries**, manage **homework**, send **announcements**, and monitor **attendance** - all in one beautiful dashboard!
+
+## Screenshots
+
+### App Interface Gallery
+
+<div align="center">
+
+| Login Screen | Admin Dashboard | Teacher Interface |
+|:---:|:---:|:---:|
+| ![School 3](screenshots/School%203.jpg) | ![School 7](screenshots/School%207.jpg) | ![School 12](screenshots/School%2012.jpg) |
+
+| Student Dashboard | Attendance Tracking | Homework Management |
+|:---:|:---:|:---:|
+| ![School 5](screenshots/School%205.jpg) | ![School 9](screenshots/School%209.jpg) | ![School 14](screenshots/School%2014.jpg) |
+
+| Analytics View | Announcements | Settings |
+|:---:|:---:|:---:|
+| ![School 2](screenshots/School%202.jpg) | ![School 11](screenshots/School%2011.jpg) | ![School 18](screenshots/School%2018.jpg) |
+
+</div>
 
 ## What It Does
 
-This comprehensive school management system connects admins, teachers, and students through an intuitive mobile interface. Teachers create daily diaries with homework assignments, mark attendance, and publish announcements. Students view their assignments, track attendance records, and stay updated with school notices. Admins manage all classes, teachers, and students from a powerful dashboard with analytics and reporting capabilities.
+This comprehensive school management system connects admins, teachers, and students through an intuitive mobile interface. Teachers create daily diaries with homework assignments, mark attendance, and track student progress. Students stay informed with announcements, track their attendance, and manage their homework efficiently.
 
 ### Dashboard Highlights
 
