@@ -12,21 +12,51 @@
 
 ## Screenshots
 
-### App Interface Gallery
-
+### Authentication
 <div align="center">
 
-| Login Screen | Admin Dashboard | Teacher Interface |
-|:---:|:---:|:---:|
-| ![School 3](screenshots/School%203.jpg) | ![School 7](screenshots/School%207.jpg) | ![School 12](screenshots/School%2012.jpg) |
+| Login Screen | Registration |
+|:---:|:---:|
+| ![School (1)](screenshots/School%20(1).jpg) | ![School (2)](screenshots/School%20(2).jpg) |
 
-| Student Dashboard | Attendance Tracking | Homework Management |
-|:---:|:---:|:---:|
-| ![School 5](screenshots/School%205.jpg) | ![School 9](screenshots/School%209.jpg) | ![School 14](screenshots/School%2014.jpg) |
+</div>
 
-| Analytics View | Announcements | Settings |
+### Admin Dashboard
+<div align="center">
+
+| Main Dashboard | Class Management | User Management |
 |:---:|:---:|:---:|
-| ![School 2](screenshots/School%202.jpg) | ![School 11](screenshots/School%2011.jpg) | ![School 18](screenshots/School%2018.jpg) |
+| ![School (3)](screenshots/School%20(3).jpg) | ![School (4)](screenshots/School%20(4).jpg) | ![School (5)](screenshots/School%20(5).jpg) |
+
+| Analytics | Reports |
+|:---:|:---:|
+| ![School (6)](screenshots/School%20(6).jpg) | ![School (7)](screenshots/School%20(7).jpg) |
+
+</div>
+
+### Teacher Dashboard
+<div align="center">
+
+| Teacher Home | Create Diary | Attendance Marking |
+|:---:|:---:|:---:|
+| ![School (8)](screenshots/School%20(8).jpg) | ![School (9)](screenshots/School%20(9).jpg) | ![School (10)](screenshots/School%20(10).jpg) |
+
+| Homework Management | Class Analytics |
+|:---:|:---:|
+| ![School (11)](screenshots/School%20(11).jpg) | ![School (12)](screenshots/School%20(12).jpg) |
+
+</div>
+
+### Student Dashboard
+<div align="center">
+
+| Student Home | View Diaries | Homework List |
+|:---:|:---:|:---:|
+| ![School (13)](screenshots/School%20(13).jpg) | ![School (14)](screenshots/School%20(14).jpg) | ![School (15)](screenshots/School%20(15).jpg) |
+
+| Attendance View | Announcements | Profile |
+|:---:|:---:|:---:|
+| ![School (16)](screenshots/School%20(16).jpg) | ![School (17)](screenshots/School%20(17).jpg) | ![School (18)](screenshots/School%20(18).jpg) |
 
 </div>
 
